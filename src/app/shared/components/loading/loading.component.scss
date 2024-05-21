@@ -1,0 +1,28 @@
+.full-page {
+  height: 100vh !important;
+  width: 100vw !important;
+  background: #302524bd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200000 !important;
+}
+
+.mensaje {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+
+.center-elements {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}

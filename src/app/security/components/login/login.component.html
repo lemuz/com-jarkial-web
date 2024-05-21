@@ -1,0 +1,31 @@
+<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+  <div class="container login-form">
+    <div class="card">
+      <div class="col-12 p-4">
+        <img [src]="'assets/images/logo (1).svg'" alt="" class="col-12">
+      </div>
+      <div class="card-header text-center">
+        <h4 class="text-upper-case mb-0">Inicio de Sesion</h4>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="signin(); loginForm.reset()" #loginForm="ngForm">
+          <div class="form-group m-2">
+            <label>Usuario:
+              <input type="text" name="usuario" class="form-control text-uppercase" maxlength="20" minlength="5"
+                required="true" placeholder="INGRESE USUARIO" [(ngModel)]="login.username">
+            </label>
+          </div>
+          <div class="form-group m-2">
+            <label>Contrasena:
+              <input type="password" name="contrasena" class="form-control text-uppercase" maxlength="20" minlength="5"
+                required="true" placeholder="INGRESE CLAVE" [(ngModel)]="login.password">
+            </label>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-secondary w-100" [disabled]="!loginForm.valid">Iniciar Sesion</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
