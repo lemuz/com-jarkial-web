@@ -18,6 +18,7 @@ import { SidebarMenuComponent } from './components/sidebar-menu/sidebar-menu.com
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [LoadingComponent]
 })
 export class SharedModule { }

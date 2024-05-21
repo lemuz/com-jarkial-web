@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class BaseHttpService {
 
-  private DOMINIO = environment.baseUrl + '/api-base-path';
+  private DOMINIO = environment.baseUrl + '/com-jarkial-api';
 
   constructor(private http: HttpClient) { }
 

@@ -23,7 +23,6 @@ import { SharedModule } from '../shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
 import { MainComponent } from './components/main/main.component';
 import { HomeRoutingModule } from './home-routing.module';
-import { AdminRoutingModule } from '../admin/admin-routing.module';
 
 
 const MY_FORMATS = {
@@ -83,8 +82,7 @@ export class PaginatorIntl implements MatPaginatorIntl {
     MatTableModule,
     MatExpansionModule,
     SharedModule,
-    HomeRoutingModule,
-    AdminRoutingModule
+    HomeRoutingModule
   ],
   providers: [
     {

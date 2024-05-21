@@ -1,1 +1,517 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$com-jarkial-web-primary: mat.define-palette(mat.$indigo-palette);
+$com-jarkial-web-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$com-jarkial-web-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$com-jarkial-web-theme: mat.define-light-theme((color: (primary: $com-jarkial-web-primary,
+        accent: $com-jarkial-web-accent,
+        warn: $com-jarkial-web-warn,
+      ),
+      typography: mat.define-typography-config(),
+      density: 0));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($com-jarkial-web-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+
+html {
+  overflow: hidden;
+}
+
+body {
+  background: #eee;
+  font-size: 0.77rem !important;
+}
+
+.mat-dialog-container {
+  padding: 0px !important;
+}
+
+.mat-button-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.my-special-class .mat-expsndion-panel-body {
+  padding: 0;
+}
+
+.table-dynamic .mat-table {
+  user-select: none;
+
+  &.resizing {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: col-resize;
+  }
+
+  .mat-cell {
+    span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .mat-header-cell {
+    position: relative;
+
+    &:not(:last-child) {
+      .resize-holder {
+        cursor: col-resize;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        right: -10px;
+        top: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  .mat-cell,
+  .mat-header-cell {
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+
+    &:not(:nth-child(1)) {
+      padding: 0 10px;
+    }
+  }
+}
+
+.mat-tab-label.mat-tab-label-active {
+  border-bottom: 2px solid #000de6;
+  color: #000de6;
+}
+
+.table-dynamic-ob .mat-table {
+  user-select: none;
+
+  &.resizing {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: col-resize;
+  }
+}
+
+.mat-cell {
+  span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.mat-header-cell {
+  position: relative;
+
+  &:not(:last-child) {
+    .resize-holder {
+      cursor: col-resize;
+      width: 20px;
+      height: 100%;
+      position: absolute;
+      right: -10px;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  .mat-header-cell {
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+
+    &:not(:nth-child(1)) {
+      padding: 0 10px;
+    }
+  }
+}
+
+.table-dynamic-us .mat-table {
+  user-select: none;
+
+  &.resizing {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: col-resize;
+  }
+
+  .mat-cell {
+    span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .mat-header-cell {
+    position: relative;
+
+    &:not(:last-child) {
+      .resize-holder {
+        cursor: col-resize;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        right: -10px;
+        top: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  .mat-cell,
+  .mat-header-cell {
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+
+    &:not(:nth-child(1)) {
+      padding: 0 10px;
+    }
+  }
+}
+
+.table-dynamic-coti .mat-table {
+  user-select: none;
+
+  &.resizing {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: col-resize;
+  }
+
+  .mat-cell {
+    span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .mat-header-cell {
+    position: relative;
+
+    &:not(:last-child) {
+      .resize-holder {
+        cursor: col-resize;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        right: -10px;
+        top: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  .mat-header-cell {
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    &:not(:nth-child(1)) {
+      padding: 0 10px;
+    }
+  }
+}
+
+.table-dynamic-regla .mat-table {
+  user-select: none;
+
+  &.resizing {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: col-resize;
+  }
+
+  .mat-cell {
+    span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .mat-header-cell {
+    position: relative;
+    &:not(:last-child) {
+      .resize-holder {
+        cursor: col-resize;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        right: -10px;
+        top: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  .mat-cell .mat-header-cell {
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    &:not(:nth-child(1)) {
+      padding: 0 10px;
+    }
+  }
+}
+
+.table-dynamic-phone .mat-table {
+  user-select: none;
+
+  &.resizing {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: col-resize;
+  }
+
+  .mat-cell {
+    span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .mat-header-cell {
+    position: relative;
+    &:not(:last-child) {
+      .resize-holder {
+        cursor: col-resize;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        right: -10px;
+        top: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  .mat-header-cell {
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    &:not(:nth-child(1)) {
+      padding: 0 10px;
+    }
+  }
+}
+
+.sticky-header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 3;
+  background: #f9f9f9;
+}
+
+.sticky-column {
+  position: sticky;
+  position: -webkit-sticky;
+  left: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+.custom-mat-dialog-panel .mat-dialog-container {
+  resize: both;
+}
+
+.mat-title-custom {
+  background: #f7f7f7;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  height: 18px;
+  cursor: move;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  padding: 11px;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background: #fff;
+  width: 0px !important;
+}
+
+tr {
+  height: 25px;
+}
+
+.mat-dialog-scroll {
+  max-height: 95%;
+  overflow-y: auto;
+}
+
+.mat-drawer-inner-container {
+  overflow-x: hidden !important;
+}
+.ng2-pdf-viewer-container {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  box-shadow: 0px 0px 9px #b4b4b4;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.card-slim {
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.mat-tab-body-content {
+  overflow-x: auto;
+  overflow-y: hidden !important;
+}
+
+.error-field {
+  border-left: 3px solid #9e1b32;
+}
+
+.mat-drawer-backdrop.mat-drawer-shown {
+  background-color: rgb(0 0 0 / 13%);
+}
+
+.error-message {
+  font-size: 13px !important;
+  color: #e70033;
+  margin-left: -3px;
+  border-left: solid 3px white;
+}
+
+.font-size-small {
+  font-size: 0.75rem;
+}
+
+.form-control {
+  font-size: 0.85rem;
+}
+
+td {
+  padding: 0.15rem !important;
+}
+
+.swal2-popup {
+  width: 27em !important;
+}
+
+.swal2-icon {
+  font-size: 1em !important;
+}
+
+.swal2-styled.swal2-cancel {
+  font-size: 0.7em !important;
+}
+
+swal2-title {
+  font-size: 1.5em !important;
+}
+
+swal2-html-container {
+  font-size: 1.0em !important;
+}
+
+swal-wide {
+  width: 850px !important;
+}
+
+.mat-expansion-panel-body {
+  overflow: auto !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-dield-flex {
+  padding: 2px 10px 0px 10px !important;
+}
+
+.mat-tab-label {
+  font-size: 12px;
+}
+
+.mat-tab-labels {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-form-field-wrapper {
+  height: 34px !important;
+  padding-bottom: 0 !important;
+}
+
+.mat-form-field-flex {
+  height: 100% !important;
+}
+
+.mat-form-field-wrapper {
+  height: 50px;
+}
+
+.mat-form-field-underline {
+  bottom: 0;
+}
+
+.mat-form-field-infix {
+  padding: 0;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-infix {
+  padding: 0;
+}
+
+.ng-select .ng-select-container {
+  min-height: 34px;
+}
+
+.select-custom .ng-select .ng-select-container {
+  min-height: 27px;
+  width: 185px !important;
+}
+
+.select-custom-2 .ng-select .ng-select-container {
+  min-height: 27px;
+  width: 165px !important;
+}
+
+.mat-custom .mat-form-field-wrapper {
+  height: 27px !important;
+  width: 180px !important;
+  font-size: 10px;
+}
+
+.ng-select.ng-select-single .ng-select-container {
+  height: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neve", sans-serif;
+}
