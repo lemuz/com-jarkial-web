@@ -39,7 +39,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref": "/",
+            "sourceMap": true
           },
           "configurations": {
             "production": {
